@@ -5,6 +5,9 @@ import torch.nn as nn
 import math
 import numpy as np
 from mpl_toolkits.mplot3d import Axes3D
+import pandas as pd
+
+df = pd.read_csv('./Questions.csv')
 
 def mean_pooling(model_output, attention_mask):
     token_embeddings = model_output[0] #First element of model_output contains all token embeddings
